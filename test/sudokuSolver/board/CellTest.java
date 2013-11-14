@@ -37,10 +37,11 @@ public class CellTest {
 
 	@Test
 	public void testSetValue() {
-		for (int i = 0; i < 10; i++) {
+		for (int i = 1; i < 10; i++) {
 			int target = i;
 			this.cell.setValue(target);
-			assertEquals(target, this.cell.getValue());	
+			assertEquals(target, this.cell.getValue());
+			assertEquals(0, this.cell.getValuePossibilities().size());
 		}
 	}
 	
@@ -54,6 +55,7 @@ public class CellTest {
 		this.cell.setValue(3);
 		this.cell.setValue(Cell.Empty);
 		assertEquals(Cell.Empty, this.cell.getValue());
+		assertEquals(9, this.cell.getValuePossibilities().size());
 	}
 	
 	@Test
@@ -61,6 +63,7 @@ public class CellTest {
 		this.cell.setValue(3);
 		this.cell.clearValue();
 		assertEquals(Cell.Empty, this.cell.getValue());
+		assertEquals(9, this.cell.getValuePossibilities().size());
 	}
 
 	@Test

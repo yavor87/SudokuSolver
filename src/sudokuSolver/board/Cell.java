@@ -43,6 +43,8 @@ public class Cell {
 	 */
 	public void clearValue() {
 		this.value = Cell.Empty;
+		this.valuePossibilities.clear();
+		this.initializeValuePossibilities();
 	}
 	
 	/**
@@ -92,7 +94,7 @@ public class Cell {
 	protected void onValueChanged() {
 		this.valuePossibilities.clear();
 		if (this.value == Cell.Empty) {
-			this.initializeValuePossibilities();
+			this.clearValue();
 		}
 	}
 	
