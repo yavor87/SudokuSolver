@@ -32,10 +32,19 @@ public class Board {
 	}
 	
 	/**
+	 * Gets the blocks of this {@link Board}.
 	 * @return the blocks.
 	 */
 	public Block[] getBlocks() {
 		return this.blocks;
+	}
+	
+	/**
+	 * Gets the cell map of this {@link Board}.
+	 * @return the cells.
+	 */
+	public Cell[][] getCells() {
+		return this.cells;
 	}
 	
 	public void updateCellPosibilities() {
