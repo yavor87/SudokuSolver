@@ -38,10 +38,6 @@ public class Board {
 		return this.blocks;
 	}
 	
-	public void setCell(int blockIndex, int cellIndex, int cellValue) {
-		this.blocks[blockIndex].setCell(cellIndex, cellValue);
-	}
-	
 	public void updateCellPosibilities() {
 		int blockIndex = 0;
 		for (Block block : this.getBlocks()) {
