@@ -18,15 +18,8 @@ public class CellTest {
 	}
 	
 	@Test
-	public void testCellCreate() {
+	public void testCellCreatedEmpty() {
 		assertEquals(Cell.Empty, this.cell.getValue());
-		ArrayList<Integer> valuePossibilites = this.cell.getValuePossibilities();
-		assertNotNull(valuePossibilites);
-		assertEquals(9, valuePossibilites.size());
-		for (int i = 0; i < valuePossibilites.size(); i++) {
-			int valuePossibility = valuePossibilites.get(i);
-			assertEquals(i + 1, valuePossibility);
-		}
 	}
 	
 	@Test
@@ -73,7 +66,13 @@ public class CellTest {
 
 	@Test
 	public void testGetValuePossibilities() {
-		assertNotNull(this.cell.getValuePossibilities());
+		ArrayList<Integer> valuePossibilites = this.cell.getValuePossibilities();
+		assertNotNull(valuePossibilites);
+		assertEquals(9, valuePossibilites.size());
+		for (int i = 0; i < valuePossibilites.size(); i++) {
+			int valuePossibility = valuePossibilites.get(i);
+			assertEquals(i + 1, valuePossibility);
+		}
 	}
 
 	@Test
