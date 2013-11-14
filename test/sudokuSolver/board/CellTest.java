@@ -13,7 +13,7 @@ public class CellTest {
 	private Cell cell;
 	
 	@Before
-	public void testInitialize() {
+	public void setUp() {
 		this.cell = new Cell();
 	}
 	
